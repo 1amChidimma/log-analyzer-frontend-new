@@ -1,0 +1,29 @@
+.left-panel {
+    flex: 1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 20px;
+}
+
+.vector-image {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+}
+
+.vector-image svg {
+    display: block;
+}
+
+.left-panel-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    color: #350c8c;
+    text-align: left;
+    line-height: 1.6;
+}

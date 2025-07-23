@@ -1,0 +1,43 @@
+.dashboard-page {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3 ease;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden;
+    padding-top: 60px;
+}
+
+.dashboard-title {
+    font-family: "Poppins", serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #350c8c;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-decription {
+    font-family: 'Andada Pro', Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 100%;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.dashboard-table {
+    background-color: transparent;
+    margin-bottom: 20px;
+}

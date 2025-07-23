@@ -1,0 +1,87 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.home-panels {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    padding: 10px 40px;
+    gap: 20px;
+    box-sizing: border-box;
+    margin-top: 60px;
+    flex: 1;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.upload-modal {
+    margin-top: 60px;
+}
+
+
+
+
+
+
+
+/* ====== RESPONSIVENESS ====== */
+@media (max-width: 768px) {
+    .home-page {
+        padding-top: 80px;
+        height: auto;
+        overflow: auto;
+    }
+
+    .home-content {
+        padding: 20px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .home-panels {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 0;
+        padding: 0 20px;
+        flex: none;
+        overflow: visible;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .right-panel-cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .right-panel-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}

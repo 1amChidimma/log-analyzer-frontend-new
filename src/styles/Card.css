@@ -1,0 +1,110 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/*
+.card-heading {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card-content {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    
+    display: flex;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;   
+}
+*/
+
+/* ====== CARD VARIANTS ====== */
+
+.card.one {
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Section */
+.card.one .card-heading {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #9169fe;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem; 
+    font-weight: 500;
+    padding: 12px 20px;
+    text-align: left;
+}
+
+/* Content Section */
+.card.one .card-content {
+    padding: 40px 0px 12px;
+    font-family: 'Andada Pro', Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #555555;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+.card.two .card-heading{
+    padding: 10px 25px;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #350c8c;
+    width: 100%;
+}
+.card.two .card-content{
+    padding: 10px 25px;
+    background-color: #9169fe;
+    color: #444444;
+}
+
+
+
+
+.card.three{
+    padding: 0; /* Remove outer horizontal padding */
+    width: fit-content;
+    background-color: transparent;
+}
+
+
+.card.three .card-heading{
+    font-family: 'Poppins', sans-serif;
+    font-size: xx-large;
+    font-weight: lighter;
+    color: #350c8c;
+    padding: 24px 0 8px 0;  /* top right bottom left */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card.three .card-content {
+    background-color: transparent;
+    color: #444444; 
+    padding: 8px 0 24px 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}

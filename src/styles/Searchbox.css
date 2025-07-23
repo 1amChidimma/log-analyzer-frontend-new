@@ -1,0 +1,51 @@
+.search-box{
+    background-color: white;
+    max-width: 80%;
+    border: 1px transparent solid;
+    border-radius: 24px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center; /* Aligns items vertically in center */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.search-box:hover {
+    border: 1px #ffef14 solid;
+}
+
+.search-box:focus-within {
+    border: 1px #faf289 solid;
+}
+
+
+.search-icon {
+    display: flex;
+    align-items: center; /* optional if SVG is already centered */
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    color: #9169fe;
+}
+
+.search-icon svg {
+    display: block;
+}
+
+.search-input{
+    width: 90%;
+    font-family: 'Inter', sans-serif;
+    font-size: small;
+    color: #444444;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+
+.search-input::placeholder {
+    color: #868686;
+    
+}
