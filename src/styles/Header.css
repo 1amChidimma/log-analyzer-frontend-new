@@ -26,28 +26,39 @@
     color: #9169fe;
     display: flex;
     align-items: center;
-    cursor: pointer;
 }
 
 .header-icon svg {
     display: block;
 }
 
-.header-icon:hover {
-    color: #190452;
-}
 
-.header-text{
+.header-text {
     font-size: large;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
 }
 
-.notification-icon{    
-    width: 20px;
-    height: 20px;
-    color: #9169fe;
+.side-icons {
     display: flex;
+    flex-direction: row;
+    gap: 24px;
     align-items: center;
 }
 
+.home-icon {
+    width: 20px;
+    height: 20px;
+    color: #9169fe;
+    cursor: pointer;
+}
+
+.home-icon:hover {
+    color: blue;
+}
+
+.notification-icon {
+    width: 20px;
+    height: 20px;
+    color: #9169fe;
+}

@@ -7,7 +7,7 @@ import '../styles/AnalysisTableCard.css';
 
 import { useToast } from "./ToastContext";
 
-const AnalysisTableCard = ({data, onRowClick}) => {
+const AnalysisTableCard = ({ data, onRowClick, searchTerm, setSearchTerm }) => {
 
     const { showToast } = useToast();
 
@@ -48,7 +48,10 @@ const AnalysisTableCard = ({data, onRowClick}) => {
             <div className='analysis-table-card'>
             <div className="analysis-search">
                 <div className="search-analysis-box">
-                    <Searchbox />
+                    <Searchbox 
+                        searchTerm={searchTerm}
+                        setSearchTerm={setSearchTerm}
+                    />
                 </div>
                 <Button onClick={handleDownload}>DOWNLOAD ANALYSIS</Button>
             </div>

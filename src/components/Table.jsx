@@ -1,7 +1,11 @@
 import React from "react";
 import '../styles/Table.css';
 
+import { useToast } from "./ToastContext";
+
 const Table = ({data = [], onRowClick}) => {
+
+    const { showToast } = useToast();
 
     return (
         <>
@@ -20,8 +24,10 @@ const Table = ({data = [], onRowClick}) => {
                 </thead>
                 <tbody>
                     {data.length === 0 ? (
-                        <tr>
-                            <td colSpan="7" style={{ textAlign: "center" }}>No data available</td>
+                        <tr onClick={() => showToast("No data available")}>
+                            <td colSpan="7" style={{ textAlign: "center" }}>
+                                No data available
+                            </td>
                         </tr>
                     ) : (
                         data.map((row, index) => (

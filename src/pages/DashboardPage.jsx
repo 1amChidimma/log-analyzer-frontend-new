@@ -7,6 +7,7 @@ import AnalysisTableCard from "../components/AnalysisTableCard";
 const DashboardPage = () => {
     const [selectedEndpoint, setSelectedEndpoint] = useState();
     const [tableData, setTableData] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
         const savedData = localStorage.getItem("analysisResult");
@@ -14,6 +15,12 @@ const DashboardPage = () => {
             setTableData(JSON.parse(savedData));
         }
     }, []);
+
+    
+    // ✅ Filter data based on search term
+    const filteredData = tableData.filter((row) =>
+        row.endpoint.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
         <>
@@ -41,7 +48,12 @@ const DashboardPage = () => {
                 )}
 
                 <div className="dashboard-table">
-                    <AnalysisTableCard data={tableData} onRowClick={setSelectedEndpoint}/>
+                    <AnalysisTableCard 
+                        data={filteredData} 
+                        onRowClick={setSelectedEndpoint}
+                        searchTerm={searchTerm}
+                        setSearchTerm={setSearchTerm}
+                    />
                 </div>
             </div>
         </div>

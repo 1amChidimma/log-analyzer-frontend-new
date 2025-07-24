@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart2, Bell } from "lucide-react";
+import { BarChart2, Bell, Home } from "lucide-react";
 import '../styles/Header.css';
 import { useNavigate } from "react-router-dom";
 
@@ -16,14 +16,15 @@ const Header = () => {
         <div className="header">
             <div className="header-title">
                 <div className="header-icon">
-                    <BarChart2 onClick={goHome}/>
+                    <BarChart2 />
                 </div>
                 <div className="header-text">
                     LOG ANALYZER
                 </div>
             </div>
-            <div className="notification-icon">
-                <Bell />
+            <div className="side-icons">
+                <Home onClick={goHome} className="home-icon"/>
+                <Bell className="notification-icon" />
             </div>
         </div>
         </>

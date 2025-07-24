@@ -8,6 +8,7 @@ const LiveDashboardPage = () => {
     const [selectedEndpoint, setSelectedEndpoint] = useState();
     const [liveData, setLiveData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState("")
 
     useEffect(() => {
         const fetchLiveData = async () => {
@@ -26,6 +27,10 @@ const LiveDashboardPage = () => {
         const interval = setInterval(fetchLiveData, 300000);
         return () => clearInterval(interval);
     }, []);
+
+    const filteredLiveData = liveData.filter((row) =>
+        row.endpoint.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
         <>
@@ -53,7 +58,12 @@ const LiveDashboardPage = () => {
                 )}
 
                 <div className="dashboard-table">
-                    <AnalysisTableCard data={liveData} onRowClick={setSelectedEndpoint}/>
+                    <AnalysisTableCard 
+                        data={filteredLiveData} 
+                        onRowClick={setSelectedEndpoint}
+                        searchTerm={searchTerm}
+                        setSearchTerm={setSearchTerm}
+                    />
                 </div>
             </div>
         </div>

@@ -14,7 +14,10 @@ export const ToastProvider = ({ children }) => {
   const showToast = (msg) => {
     setMessage(msg);
     setVisible(true);
-    setTimeout(() => setVisible(false), 10000); // hide after 3s
+    setTimeout(() => {
+      setMessage("");
+      setVisible(false);
+    }, 3000); // hide after 3s
     console.log("TOAST RENDERED: ", message, visible);
 
   };
